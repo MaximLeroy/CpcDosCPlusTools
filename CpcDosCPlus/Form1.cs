@@ -13,12 +13,12 @@ namespace CpcDosCPlus
     public partial class Form1 : Form
     {
         private readonly CpcDosCPlusListeObjets objets;
-        private readonly CpcDosCPlusListeFenetre objetsfenetre;
+       
         public Form1()
         {
             InitializeComponent();
-            objets = new CpcDosCPlusListeObjets("fichier1.txt");
-            objetsfenetre = new CpcDosCPlusListeFenetre("fichier1.txt");
+            objets = new CpcDosCPlusListeObjets("fichier1.cpc");
+     
 
             textBox1.Text = objets.ToCPCDosCPlus();
         }
@@ -30,7 +30,7 @@ namespace CpcDosCPlus
                 listBox1.Items.Add(objet);
 
             }
-            foreach (CpcDosCPlusObjetFenetre objetfenetre in objetsfenetre)
+            foreach (CpcDosCPlusObjet objetfenetre in objets)
             {
                 comboBox1.Items.Add(objetfenetre);
 
@@ -63,13 +63,19 @@ namespace CpcDosCPlus
 
             if (list != null)
             {
-                CpcDosCPlusObjetFenetre obj = list.SelectedItem as CpcDosCPlusObjetFenetre;
+                CpcDosCPlusObjet obj = list.SelectedItem as CpcDosCPlusObjet;
 
                 if (list != null)
                 {
                     panel2.Controls.Add(obj.CreateUC());
                 }
             }
+        }
+        Preview apercu = new Preview();
+        private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+            apercu.Show();
         }
     }
 }

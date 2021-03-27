@@ -8,28 +8,28 @@ using System.Windows.Forms;
 
 namespace CpcDosCPlus
 {
-    public class CpcDosCPlusObjetFenetre
+    public class CpcDosCPlusObjet
     {
         protected readonly Dictionary<string, string> Attributes;
 		public virtual string TypeObjet { get; }
         public string ID { get; set; }
 
-        public CpcDosCPlusObjetFenetre() : this(new Dictionary<string, string>())
+        public CpcDosCPlusObjet() : this(new Dictionary<string, string>())
         {
         }
 
-        public CpcDosCPlusObjetFenetre(Dictionary<string, string> attributes)
+        public CpcDosCPlusObjet(Dictionary<string, string> attributes)
         {
             Attributes = attributes;
         }
 
-        public CpcDosCPlusObjetFenetre(string[] declaration)
+        public CpcDosCPlusObjet(string[] declaration)
         {
             Attributes = new Dictionary<string, string>();
 			string typeObjet = declaration[0].Split('/')[0].Trim();
             ID = declaration[0].Split('/')[1].Trim();
 
-			if (typeObjet == "fonction")
+			if (typeObjet == "function")
 			{
 				StringBuilder code = new StringBuilder();
 				for (int i = 0, length = declaration.Length; i <length; i++)
@@ -63,7 +63,7 @@ namespace CpcDosCPlus
 					else
 					{
 						// Il s'agit d'un autre type de ligne
-						if (ligne.StartsWith("@#Handle_Fenetre"))
+						if (ligne.StartsWith("@#"))
 						{
 							// Ca j'ai pas compris ce que c'était
 						}

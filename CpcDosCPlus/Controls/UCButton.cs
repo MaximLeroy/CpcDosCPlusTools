@@ -10,27 +10,39 @@ using System.Windows.Forms;
 
 namespace CpcDosCPlus.Controls
 {
+   
     public partial class UCButton : UserControl
     {
-        private readonly CpcDosCPlusListeFenetre objetsfenetre;
+        private readonly CpcDosCPlusListeObjets objets;
         public UCButton(CpcDosCPlusBouton button)
         {
             InitializeComponent();
-            objetsfenetre = new CpcDosCPlusListeFenetre("fichier1.txt");
-
+            objets = new CpcDosCPlusListeObjets("fichier1.cpc");
+            propertyGrid1.SelectedObject = button;
             //TODO: Gérer proprement le binding bi-directionnel
-            int TailleX = int.Parse(button.Tx);
-            int TailleY = int.Parse(button.Ty);
-            textBox1.Text = button.Texte;
-            button1.Text = button.Texte;
+            int TailleX = int.Parse(button.SizeX);
+            int TailleY = int.Parse(button.SizeY);
+            
+            button1.Text = button.Text;
             button1.Width = TailleX;
             button1.Height = TailleY;
-            textBox6.Text = button.CouleurFond;
-            if (textBox6.Text != string.Empty)
+            FormCollection nbforms = Application.OpenForms;
+            Button monbouton;
+            monbouton = new Button();
+
+         
+            nbforms["preview"].Controls.Add(monbouton);
+            
+            monbouton.Location = new Point(int.Parse(button.Px), int.Parse(button.Py));
+            monbouton.Size = new Size(TailleX, TailleY);
+            monbouton.Text = button.Text;
+            string  CouleurFOND;
+            CouleurFOND = button.BackColor;
+            if (CouleurFOND != null)
             {
-                textBox5.Text = button.CouleurFond.Substring(0, 3);
-                textBox7.Text = button.CouleurFond.Substring(4, 3);
-                textBox8.Text = button.CouleurFond.Substring(8, 3);
+                textBox5.Text = button.BackColor.Substring(0, 3);
+                textBox7.Text = button.BackColor.Substring(4, 3);
+                textBox8.Text = button.BackColor.Substring(8, 3);
                 button1.BackColor = Color.FromArgb(int.Parse(textBox5.Text), int.Parse(textBox7.Text), int.Parse(textBox8.Text));
             }
             else
@@ -41,11 +53,12 @@ namespace CpcDosCPlus.Controls
 
         private void UCButton_Load(object sender, EventArgs e)
         {
-            foreach (CpcDosCPlusObjetFenetre objetfenetre in objetsfenetre)
+            foreach (CpcDosCPlusObjet objet in objets)
             {
-                comboBox1.Items.Add(objetfenetre);
+                comboBox1.Items.Add(objet);
 
             }
+            
         }
 
    
@@ -58,7 +71,7 @@ namespace CpcDosCPlus.Controls
 
             if (list != null)
             {
-                CpcDosCPlusObjetFenetre obj = list.SelectedItem as CpcDosCPlusObjetFenetre;
+                CpcDosCPlusObjet obj = list.SelectedItem as CpcDosCPlusObjet;
 
                 if (list != null)
                 {
@@ -67,9 +80,20 @@ namespace CpcDosCPlus.Controls
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            
+    
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
-}
+    }
+

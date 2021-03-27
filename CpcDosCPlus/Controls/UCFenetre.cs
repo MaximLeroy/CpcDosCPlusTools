@@ -10,24 +10,32 @@ using System.Windows.Forms;
 
 namespace CpcDosCPlus.Controls
 {
+    
     public partial class UCFenetre : UserControl
     {
-        public UCFenetre(CpcDosCPlusFenetre fenetre )
+     
+        public UCFenetre(CpcDosCPlusImageBox mafenetre )
         {
+            
             InitializeComponent();
             //TODO: Gérer proprement le binding bi-directionnel
-            int TailleX = int.Parse(fenetre.Tx);
-            int TailleY = int.Parse(fenetre.Ty);
+            int TailleX = int.Parse(mafenetre.SizeX);
+            int TailleY = int.Parse(mafenetre.SizeY);
 
-            label1.Text = fenetre.Titre;
-            panel1.Width = TailleX;
-            panel1.Height = TailleY;
+            label1.Text = mafenetre.Title;
+            panel4.Width = TailleX;
+            panel4.Height = TailleY;
             panel2.Width = TailleX;
+            Preview apercu = new Preview();
+            apercu.Show();
+            apercu.Width = TailleX;
+            apercu.Height = TailleY;
+            
         }
 
-        private void UCFenetre_Load(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-          
+
         }
     }
 }

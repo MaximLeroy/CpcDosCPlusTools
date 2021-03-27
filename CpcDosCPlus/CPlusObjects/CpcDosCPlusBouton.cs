@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace CpcDosCPlus
         {
         }
 
-        public override string TypeObjet { get { return "bouton"; } }
+        public override string TypeObjet { get { return "button"; } }
 
         public string Handle
         {
@@ -35,22 +36,22 @@ namespace CpcDosCPlus
                 }
             }
         }
-        public string CouleurFond
+        public string BackColor
         {
             get
             {
-                Attributes.TryGetValue(".couleurfond", out string value);
+                Attributes.TryGetValue(".BackColor", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".couleurfond"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".backcolor"))
                 {
-                    Attributes.Remove(".couleurfond");
+                    Attributes.Remove(".backcolor");
                 }
                 else
                 {
-                    Attributes[".couleurfond"] = value;
+                    Attributes[".backcolor"] = value;
                 }
             }
         }
@@ -94,98 +95,98 @@ namespace CpcDosCPlus
                 }
             }
         }
-        public string Tx
+        public string SizeX
         {
             get
             {
-                Attributes.TryGetValue(".tx", out string value);
+                Attributes.TryGetValue(".sx", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".tx"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".sx"))
                 {
-                    Attributes.Remove(".tx");
+                    Attributes.Remove(".sx");
                 }
                 else
                 {
-                    Attributes[".tx"] = value;
+                    Attributes[".sx"] = value;
                 }
             }
         }
-        public string Ty
+        public string SizeY
         {
             get
             {
-                Attributes.TryGetValue(".ty", out string value);
+                Attributes.TryGetValue(".sy", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".ty"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".sy"))
                 {
-                    Attributes.Remove(".ty");
+                    Attributes.Remove(".sy");
                 }
                 else
                 {
-                    Attributes[".ty"] = value;
+                    Attributes[".sy"] = value;
                 }
             }
         }
-        public string Opacite
+        public string Opacity
         {
             get
             {
-                Attributes.TryGetValue(".Opacite", out string value);
+                Attributes.TryGetValue(".Opacity", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Opacite"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Opacity"))
                 {
-                    Attributes.Remove(".Opacite");
+                    Attributes.Remove(".Opacity");
                 }
                 else
                 {
-                    Attributes[".Opacite"] = value;
+                    Attributes[".Opacity"] = value;
                 }
             }
         }
-        public string Parametres
+        public string Parameters
         {
             get
             {
-                Attributes.TryGetValue(".Parametres", out string value);
+                Attributes.TryGetValue(".Parameters", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Parametres"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Parameters"))
                 {
-                    Attributes.Remove(".Parametres");
+                    Attributes.Remove(".Parameters");
                 }
                 else
                 {
-                    Attributes[".Parametres"] = value;
+                    Attributes[".Parameters"] = value;
                 }
             }
         }
-        public string Texte
+        public string Text
         {
             get
             {
-                Attributes.TryGetValue(".texte", out string value);
+                Attributes.TryGetValue(".text", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".texte"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".text"))
                 {
-                    Attributes.Remove(".texte");
+                    Attributes.Remove(".text");
                 }
                 else
                 {
-                    Attributes[".texte"] = value;
+                    Attributes[".text"] = value;
                 }
             }
         }
@@ -233,5 +234,6 @@ namespace CpcDosCPlus
             return new Controls.UCButton(this) as UserControl;
             
         }
+
     }
 }

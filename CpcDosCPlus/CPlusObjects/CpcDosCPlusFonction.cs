@@ -13,7 +13,7 @@ namespace CpcDosCPlus
         {
         }
 
-        public override string TypeObjet { get { return "fonction"; } }
+        public override string TypeObjet { get { return "function"; } }
 
         public string Code
         {

@@ -25,24 +25,31 @@ namespace CpcDosCPlus
 					string[] tmp = ligne.Split('/');
 					if (tmp.Length > 2)
 					{
-						throw new Exception($"Je n'arrive pas à décoder cette ligne : {i}");
+						//throw new Exception($"Je n'arrive pas à décoder cette ligne : {i}");
+						
 					}
 					debutObjet = i;
 					typeObjet = tmp[0];
 					chercheDebut = false; // Maintenant on va chercher la fin
 				}
-				else if (!chercheDebut && ligne.StartsWith("fin/"))
+				else if (!chercheDebut && ligne.StartsWith("end/"))
 				{
 					switch (typeObjet)
 					{
-					
+						
+						case "button":
 						case "bouton":
 							this.Add(new CpcDosCPlusBouton(lignes.SubArray(debutObjet, i)));
 							break;
+					
+						//case "window":
+							//this.Add(new CpcDosCPlusBouton(lignes.SubArray(debutObjet, i)));
+							//break;
 						case "fonction":
+						case "function":
 							this.Add(new CpcDosCPlusFonction(lignes.SubArray(debutObjet, i)));
 							break;
-						case "imagebox":
+						case "window":
 							this.Add(new CpcDosCPlusImageBox(lignes.SubArray(debutObjet, i)));
 							break;
 						case "picturebox":

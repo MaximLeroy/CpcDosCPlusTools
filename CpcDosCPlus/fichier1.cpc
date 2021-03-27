@@ -1,0 +1,299 @@
+﻿
+Window/ Notepad
+    .Title              = "FireNotepad"
+    .Parameters         = "SIZBTN:0"
+    .Icon               = "OS/FIREFLY/IMG/ICN/MFXT.PNG"
+    .PX                 = "200"
+    .PY                 = "200"
+    .SX                 = "550"
+    .SY                 = "450"
+    .BackColor          = "255,145,000"
+
+Create/
+end/ Window
+window/ APP3
+	.titre 			= "Application test 2"
+	.px				= "300"
+	.py				= "150"
+	.SX			= "400"
+	.SY				= "226"
+	.Opacite        = "190"
+	.Parametres     = "TYPE:0 ALPHAMODE:1"
+	.CouleurFenetre	= "050,050,100"
+	.CouleurTitre	= "120,120,210"
+	.CouleurFond	= "100,240,100"
+	.Icone			= "%OS_GUI%/ICO_CFT.png"
+	rem/ .ImgTitre                  = "IMG_TITRE.PNG"
+	.event                          = ""
+create/
+end/ window
+window/ APP2
+	.titre 			= "Application test 2"
+	.px				= "300"
+	.py				= "150"
+	.SX			= "400"
+	.SY				= "226"
+	.Opacite        = "190"
+	.Parametres     = "TYPE:0 ALPHAMODE:1"
+	.CouleurFenetre	= "050,050,100"
+	.CouleurTitre	= "120,120,210"
+	.CouleurFond	= "100,240,100"
+	.Icone			= "%OS_GUI%/ICO_CFT.png"
+	rem/ .ImgTitre                  = "IMG_TITRE.PNG"
+	.event                          = ""
+creer/
+end/ window
+
+Picturebox/ NTP_Left
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "0"
+    .SX                 = "80"
+    .SY                 = "450"
+    .Image              = "OS/FIREFLY/MD/Left_NTP.PNG"
+Create/
+End/ Picturebox
+
+Textbox/ File_Name
+    .Handle             = "%NTP%"
+    .Parameters         = "EDIT:1 COL:1 MULTILINES:1"
+    .PX                 = "1"
+    .PY                 = "50"
+    .SX                 = "78"
+    .SY                 = "20"
+    .Text               = "%Filename%"
+    .Event              = "%_exe_path_%=KeyPress"
+Create/
+End/ Textbox
+
+fenetre/ test
+    .Title              = "FireNotepad"
+    .Parameters         = "SIZBTN:0"
+    .Icon               = "OS/FIREFLY/IMG/ICN/MFXT.PNG"
+    .PX                 = "200"
+    .PY                 = "200"
+    .SX                 = "550"
+    .SY                 = "450"
+    .BackColor          = "255,145,000"
+Create/
+End/ fenetre
+
+Textbox/ Text_Zone
+    .Handle             = "%NTP%"
+    .Parameters         = "EDIT:1 COL:1 MULTILINES:1"
+    .PX                 = "80"
+    .Text               = "Here you can write some text %ContentContent%"
+    .PY                 = "0"
+    .SX                 = "470"
+    .SY                 = "450"
+    .TextColor          = "189,113,000"
+    .Event              = "%_exe_path_%=KeyPress"
+Create/
+End/ Textbox
+
+Button/ Open_Text
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "10"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Open"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+Button/ Save_Text
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "80"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Save"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+Button/ Clear_Text
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "120"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Clear"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+Textblock/ Fond_TXT
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0"
+    .TextColor          = "255,162,022"
+    .PX                 = "15"
+    .PY                 = "180"
+    .SX                 = "65"
+    .SY                 = "30"
+    .Text               = "Fond"
+Create/
+End/ Textblock
+
+Button/ Noir_Orange
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "230"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Black"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+Button/ Bleu_Orange
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "280"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Blue"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+Button/ Violet_Orange
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "330"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Purple"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+
+Button/ Vert_Orange
+    .Handle             = "%NTP%"
+    .Parameters         = "COL:0 IMGAUTO:2"
+    .PX                 = "0"
+    .PY                 = "380"
+    .SX                 = "80"
+    .SY                 = "30"
+    .Text               = "Green"
+    .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
+    .Event              = "%_exe_path_%=Click"
+Create/
+End/ Button
+
+
+Function/ Violet_Orange.Click()
+    Textbox/ /modif:Text_Zone
+    .Text       = "Purple and Orange theme applied"
+    .TextColor  = "255,162,022"
+    .BackColor  = "190,003,228"
+    Create/
+End/ Textbox
+End/ Function 
+
+
+Function/ Bleu_Orange.Click()
+    Textbox/ /modif:Text_Zone
+    .Text       = "Blue and Orange theme applied"
+    .TextColor  = "255,162,022"
+    .BackColor  = "000,047,255"
+    Create/
+End/ Textbox
+End/ Function
+
+
+
+Function/ Noir_Orange.Click()
+    Textbox/ /modif:Text_Zone
+    .Text       = "Black and Orange Theme applied"
+    .TextColor  = "255,162,022"
+    .BackColor  = "010,010,010"
+    Create/
+End/ Textbox
+End/ Function
+
+
+Function/ Clear_Text.Click()
+    Textbox/ /modif:Text_Zone
+    .Text       = ""
+    .TextColor  = "255,162,022"
+    .BackColor  = "185,183,183"
+    Create/
+End/ Textbox
+End/ Function
+
+
+Function/ Vert_Orange.Click()
+    Textbox/ /modif:Text_Zone
+    .Text       = "Green and Orange Theme applied"
+    .TextColor  = "255,162,022"
+    .BackColor  = "000,138,041"
+    Create/
+End/ Textbox
+End/ Function
+
+
+
+Function/ Save_Text.Click()
+    Textbox/ /modif:Text_Zone
+    @#Contenu .text
+    End/ Textbox
+    Textbox/ /modif:File_Name
+    @#Filename .text
+    End/ Textbox
+
+CMD/ /THREAD    Write/ C:/CPCDOS/OS/FIREFLY/TXT/%Filename%.FXT = %Contenu%
+
+    Msgbox/ File saved /Titre: FireFly Notification /Erreur:3 /Type:0
+End/ Function
+
+
+
+
+
+Function/ Text_Zone.KeyPress(touche_pressee)
+
+	
+	 If/ "%touche_pressee%" = " " Then:
+    Textbox/ /modif:Text_Zone
+	@#Contenu .text
+		.text = ""
+        Create/
+End/ Textbox
+		
+End/ If
+
+End/ Function
+
+
+
+Function/ Open_Text.Click()
+    Textbox/ /modif:File_Name
+    @#Filename .text
+    End/ Textbox
+    Textbox/ /modif:Text_Zone
+    @#Contenu .text 
+    End/ Textbox
+
+    @#Contenu OPEN/ C:/CPCDOS/OS/FIREFLY/TXT/%Filename%.FXT
+
+    Textbox/ /modif:Text_Zone
+    .text   "%Contenu%"
+    .TextColor  = "255,162,022"
+Create/
+End/ Function
