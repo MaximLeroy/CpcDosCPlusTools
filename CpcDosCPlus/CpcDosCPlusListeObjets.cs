@@ -50,7 +50,7 @@ namespace CpcDosCPlus
 							this.Add(new CpcDosCPlusFonction(lignes.SubArray(debutObjet, i)));
 							break;
 						case "window":
-							this.Add(new CpcDosCPlusImageBox(lignes.SubArray(debutObjet, i)));
+							this.Add(new CpcDosCPlusWindow(lignes.SubArray(debutObjet, i)));
 							break;
 						case "picturebox":
 							this.Add(new CpcDosCPlusPictureBox(lignes.SubArray(debutObjet, i)));

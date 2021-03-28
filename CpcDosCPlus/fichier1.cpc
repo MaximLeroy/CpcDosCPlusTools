@@ -102,6 +102,7 @@ Button/ Open_Text
     .Text               = "Open"
     .Image              = "OS/FIREFLY/IMG/ICN/BTN/BTN_OR.PNG"
     .Event              = "%_exe_path_%=Click"
+    .BackColor          = "255,145,000"
 Create/
 End/ Button
 

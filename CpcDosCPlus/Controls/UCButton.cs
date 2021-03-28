@@ -30,25 +30,37 @@ namespace CpcDosCPlus.Controls
             Button monbouton;
             monbouton = new Button();
 
-         
+         //on pourra choisir sur quelle forme ajouter en modifiant avec un textbox
             nbforms["preview"].Controls.Add(monbouton);
             
             monbouton.Location = new Point(int.Parse(button.Px), int.Parse(button.Py));
             monbouton.Size = new Size(TailleX, TailleY);
             monbouton.Text = button.Text;
-            string  CouleurFOND;
+          
+            string CouleurFOND;
+            string red = "255";
+            string green = "255";
+            string blue = "255";
             CouleurFOND = button.BackColor;
-            if (CouleurFOND != null)
+            textBox1.Text = CouleurFOND;
+            if (CouleurFOND == null)
             {
-                textBox5.Text = button.BackColor.Substring(0, 3);
-                textBox7.Text = button.BackColor.Substring(4, 3);
-                textBox8.Text = button.BackColor.Substring(8, 3);
-                button1.BackColor = Color.FromArgb(int.Parse(textBox5.Text), int.Parse(textBox7.Text), int.Parse(textBox8.Text));
+               
+                CouleurFOND = "255,255,255";
+
             }
             else
-                 
-                button1.BackColor = Color.FromArgb(int.Parse(textBox5.Text), int.Parse(textBox7.Text), int.Parse(textBox8.Text));
+                
+            red = CouleurFOND.Substring(0, 3);
+            green = CouleurFOND.Substring(4, 3);
+            blue = CouleurFOND.Substring(8, 3);
           
+
+             
+            button1.BackColor = Color.FromArgb(int.Parse(red), int.Parse(green), int.Parse(blue));
+            monbouton.BackColor = Color.FromArgb(int.Parse(red), int.Parse(green), int.Parse(blue));
+
+     
         }
 
         private void UCButton_Load(object sender, EventArgs e)

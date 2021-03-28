@@ -40,7 +40,7 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".BackColor", out string value);
+                Attributes.TryGetValue(".backcolor", out string value);
                 return value;
             }
             set
@@ -137,18 +137,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".Opacity", out string value);
+                Attributes.TryGetValue(".opacity", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Opacity"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".opacity"))
                 {
-                    Attributes.Remove(".Opacity");
+                    Attributes.Remove(".opacity");
                 }
                 else
                 {
-                    Attributes[".Opacity"] = value;
+                    Attributes[".opacity"] = value;
                 }
             }
         }
@@ -156,18 +156,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".Parameters", out string value);
+                Attributes.TryGetValue(".parameters", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Parameters"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".parameters"))
                 {
-                    Attributes.Remove(".Parameters");
+                    Attributes.Remove(".parameters");
                 }
                 else
                 {
-                    Attributes[".Parameters"] = value;
+                    Attributes[".parameters"] = value;
                 }
             }
         }

@@ -7,9 +7,9 @@ using System.Runtime.Serialization;
 using System.Windows.Forms;
 namespace CpcDosCPlus
 {
-    public class CpcDosCPlusImageBox : CpcDosCPlusObjet
+    public class CpcDosCPlusWindow : CpcDosCPlusObjet
     {
-        public CpcDosCPlusImageBox(string[] declaration) : base(declaration)
+        public CpcDosCPlusWindow(string[] declaration) : base(declaration)
         {
         }
 
@@ -114,18 +114,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".Opacity", out string value);
+                Attributes.TryGetValue(".opacity", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Opacity"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".opacity"))
                 {
-                    Attributes.Remove(".Opacity");
+                    Attributes.Remove(".opacity");
                 }
                 else
                 {
-                    Attributes[".Opacity"] = value;
+                    Attributes[".opacity"] = value;
                 }
             }
         }
@@ -152,18 +152,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".WindowColor", out string value);
+                Attributes.TryGetValue(".windowColor", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".WindowColor"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".windowColor"))
                 {
-                    Attributes.Remove(".WindowColor");
+                    Attributes.Remove(".windowColor");
                 }
                 else
                 {
-                    Attributes[".WindowColor"] = value;
+                    Attributes[".windowColor"] = value;
                 }
             }
         }
@@ -171,18 +171,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".TitleColor", out string value);
+                Attributes.TryGetValue(".titleColor", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".TitleColor"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".titleColor"))
                 {
-                    Attributes.Remove(".TitleColor");
+                    Attributes.Remove(".titleColor");
                 }
                 else
                 {
-                    Attributes[".TitleColor"] = value;
+                    Attributes[".titleColor"] = value;
                 }
             }
         }
@@ -190,18 +190,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".BackColor", out string value);
+                Attributes.TryGetValue(".backcolor", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".BackColor"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".backcolor"))
                 {
-                    Attributes.Remove(".BackColor");
+                    Attributes.Remove(".backcolor");
                 }
                 else
                 {
-                    Attributes[".BackColor"] = value;
+                    Attributes[".backcolor"] = value;
                 }
             }
         }
@@ -209,18 +209,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".Icon", out string value);
+                Attributes.TryGetValue(".icon", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".Icon"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".icon"))
                 {
-                    Attributes.Remove(".Icon");
+                    Attributes.Remove(".icon");
                 }
                 else
                 {
-                    Attributes[".Icon"] = value;
+                    Attributes[".icon"] = value;
                 }
             }
         }
@@ -228,18 +228,18 @@ namespace CpcDosCPlus
         {
             get
             {
-                Attributes.TryGetValue(".TitleImg", out string value);
+                Attributes.TryGetValue(".titleImg", out string value);
                 return value;
             }
             set
             {
-                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".TitleImg"))
+                if (string.IsNullOrWhiteSpace(value) && Attributes.ContainsKey(".titleImg"))
                 {
-                    Attributes.Remove(".TitleImg");
+                    Attributes.Remove(".titleImg");
                 }
                 else
                 {
-                    Attributes[".TitleImg"] = value;
+                    Attributes[".titleImg"] = value;
                 }
             }
         }

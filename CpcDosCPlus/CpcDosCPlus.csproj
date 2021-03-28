@@ -71,11 +71,41 @@
     <Compile Include="Controls\UCButton.Designer.cs">
       <DependentUpon>UCButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\UCCheckBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCCheckBox.Designer.cs">
+      <DependentUpon>UCCheckBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\UCFenetre.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\UCFenetre.Designer.cs">
       <DependentUpon>UCFenetre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCFonction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCFonction.Designer.cs">
+      <DependentUpon>UCFonction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCPictureBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCPictureBox.Designer.cs">
+      <DependentUpon>UCPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCProgressBar.Designer.cs">
+      <DependentUpon>UCProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCTextBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCTextBlock.Designer.cs">
+      <DependentUpon>UCTextBlock.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\UCTextBox.cs">
       <SubType>UserControl</SubType>
@@ -85,7 +115,7 @@
     </Compile>
     <Compile Include="CpcDosCPlusObjet.cs" />
     <Compile Include="CPlusObjects\CpcDosCPlusPictureBox.cs" />
-    <Compile Include="CPlusObjects\CpcDosCPlusImageBox.cs" />
+    <Compile Include="CPlusObjects\CpcDosCPlusWindow.cs" />
     <Compile Include="CPlusObjects\CpcDosCPlusCheckBox.cs" />
     <Compile Include="CPlusObjects\CpcDosCPlusTextBox.cs" />
     <Compile Include="CPlusObjects\CpcDosCPlusTexteBloc.cs" />
@@ -119,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCFenetre.resx">
       <DependentUpon>UCFenetre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCFonction.resx">
+      <DependentUpon>UCFonction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCTextBlock.resx">
+      <DependentUpon>UCTextBlock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UCTextBox.resx">
       <DependentUpon>UCTextBox.cs</DependentUpon>
@@ -171,6 +207,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bouton2.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
